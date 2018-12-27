@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+
+// Component Imports
 import ResponseGauge from "../ResponseGauge";
 
 export default function SurveyInfo({
@@ -31,6 +34,14 @@ export default function SurveyInfo({
     </InfoWrapper>
   );
 }
+
+SurveyInfo.propTypes = {
+  participantCount: PropTypes.number.isRequired,
+  responseRate: PropTypes.number.isRequired,
+  responseCount: PropTypes.number.isRequired
+};
+
+// Styled Components
 
 const InfoWrapper = styled.div`
   width: 100%;

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
-export default class Question extends Component {
+export default class RatingQuestion extends Component {
   state = {
     counts: null,
     average: null,
@@ -36,28 +37,9 @@ export default class Question extends Component {
   }
 }
 
-const QuestionWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Description = styled.p`
-  font-weight: 500;
-  font-size: 1.2em;
-  max-width: 80%;
-  padding-left: 20px;
-  @media (max-width: 700px) {
-    font-size: 1em;
-    padding-right: 5%;
-  }
-`;
-
-const Average = styled.p`
-  font-size: 2em;
-  color: ${props => props.color};
-  padding-right: 20px;
-`;
+RatingQuestion.propTypes = {
+  question: PropTypes.object.isRequired
+};
 
 const generateData = responses => {
   const counts = {
@@ -81,3 +63,28 @@ const generateData = responses => {
 
   return [counts, average];
 };
+
+// Styled Components
+
+const QuestionWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Description = styled.p`
+  font-weight: 500;
+  font-size: 1.2em;
+  max-width: 80%;
+  padding-left: 20px;
+  @media (max-width: 700px) {
+    font-size: 1em;
+    padding-right: 5%;
+  }
+`;
+
+const Average = styled.p`
+  font-size: 2em;
+  color: ${props => props.color};
+  padding-right: 20px;
+`;
