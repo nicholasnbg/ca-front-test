@@ -6,7 +6,7 @@ import { getSurvey } from "../../actions/surveyActions";
 
 import Spinner from "../Spinner";
 import SurveyInfo from "./SurveyInfo";
-// import ThemeCard from "./ThemeCard";
+import QuestionSection from "./QuestionSection";
 
 class Survey extends Component {
   componentDidMount() {
@@ -33,6 +33,9 @@ class Survey extends Component {
             responseRate={survey.response_rate}
             responseCount={survey.submitted_response_count}
           />
+          {survey.themes.map(theme => (
+            <QuestionSection theme={theme} />
+          ))}
         </div>
       );
     }
