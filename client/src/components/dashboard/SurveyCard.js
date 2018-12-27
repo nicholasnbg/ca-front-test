@@ -12,7 +12,7 @@ export default class SurveyCard extends Component {
       <Card>
         <Info>
           <SurveyName>{surveyInfo.name}</SurveyName>
-          <Respondants>{surveyInfo.respondants}</Respondants>
+          <Respondants>Responses: {surveyInfo.participant_count}</Respondants>
         </Info>
         <ResponseGauge
           responsePerc={Math.round(surveyInfo.response_rate * 100)}
