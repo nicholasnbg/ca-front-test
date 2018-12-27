@@ -19,3 +19,5 @@ app.get("/", (req, res) => {
   const response = () => res.json(surveys);
   setTimeout(response, Math.random() * 2000); // << Mock wait times from external api
 });
+
+app.listen(port, () => console.log(`Running on port ${port}`));
