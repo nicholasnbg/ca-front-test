@@ -14,3 +14,8 @@ app.use(function(req, res, next) {
   );
   next();
 });
+
+app.get("/", (req, res) => {
+  const response = () => res.json(surveys);
+  setTimeout(response, Math.random() * 2000); // << Mock wait times from external api
+});
