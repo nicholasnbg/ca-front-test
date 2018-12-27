@@ -20,4 +20,15 @@ app.get("/", (req, res) => {
   setTimeout(response, Math.random() * 2000); // << Mock wait times from external api
 });
 
+app.get("/survey/:id", (req, res) => {
+  try {
+    let survey = require(`./data/${req.params.id}`);
+    res.json(survey);
+  } catch (err) {
+    res.json({
+      error: "sorry, no such survey exists"
+    });
+  }
+});
+
 app.listen(port, () => console.log(`Running on port ${port}`));
