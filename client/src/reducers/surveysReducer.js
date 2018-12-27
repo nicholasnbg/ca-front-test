@@ -17,7 +17,6 @@ export default function(state = initialState, action) {
         surveys: action.payload,
         loading: false
       };
-
     default:
       return state;
   }
