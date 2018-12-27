@@ -10,6 +10,8 @@ export default function DashboardHeader() {
   );
 }
 
+// Styled Components
+
 const Row = styled.div`
   background: #ffffff;
   border-radius: 10px 10px 0 0;

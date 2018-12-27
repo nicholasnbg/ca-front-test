@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+import { connect } from "react-redux";
 import { getSurvey } from "../../actions/surveyActions";
 
+// Component imports
 import Spinner from "../Spinner";
 import SurveyInfo from "./SurveyInfo";
 import QuestionSection from "./QuestionSection";
@@ -17,7 +20,6 @@ class Survey extends Component {
   render() {
     const { loading, survey } = this.props.survey;
     let surveyContent;
-    console.log(survey);
 
     if (loading) {
       surveyContent = <Spinner />;
@@ -33,8 +35,8 @@ class Survey extends Component {
             responseRate={survey.response_rate}
             responseCount={survey.submitted_response_count}
           />
-          {survey.themes.map(theme => (
-            <QuestionSection theme={theme} />
+          {survey.themes.map((theme, i) => (
+            <QuestionSection key={i} theme={theme} />
           ))}
         </div>
       );
@@ -44,6 +46,11 @@ class Survey extends Component {
   }
 }
 
+Survey.propTypes = {
+  getSurvey: PropTypes.func.isRequired,
+  survey: PropTypes.object.isRequired
+};
+
 const mapStateToProps = state => ({
   survey: state.survey
 });
@@ -52,6 +59,8 @@ export default connect(
   mapStateToProps,
   { getSurvey }
 )(Survey);
+
+// Styled Components
 
 const SurveyHeading = styled.h1`
   text-align: center;

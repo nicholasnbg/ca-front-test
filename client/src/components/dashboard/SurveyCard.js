@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import styled from "styled-components";
+
+// Component imports
 import ResponseGauge from "../ResponseGauge";
 
 export default class SurveyCard extends Component {
@@ -31,6 +34,12 @@ export default class SurveyCard extends Component {
     );
   }
 }
+
+SurveyCard.propTypes = {
+  surveyInfo: PropTypes.object.isRequired
+};
+
+// Styled Components
 
 const Card = styled.div`
   display: grid;

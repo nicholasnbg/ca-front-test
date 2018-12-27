@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Collapsible from "react-collapsible";
-import Question from "./Question";
+import RatingQuestion from "./RatingQuestion";
 
 export default class QuestionSection extends Component {
   render() {
     const { theme } = this.props;
     return (
+      // Trigger prop generates markup for header, styling contained in src/App.css
       <Collapsible
         trigger={
           <React.Fragment>
@@ -16,7 +17,7 @@ export default class QuestionSection extends Component {
         }
       >
         {theme.questions.map(q => (
-          <Question question={q} />
+          <RatingQuestion question={q} />
         ))}
       </Collapsible>
     );
