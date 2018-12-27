@@ -2,7 +2,6 @@ import { GET_SURVEYS, SURVEYS_LOADING } from "./types";
 import axios from "axios";
 
 export const getSurveys = () => dispatch => {
-  console.log("happening");
   dispatch(setSurveysLoading());
   axios.get("http://localhost:5000/").then(res => {
     dispatch({
