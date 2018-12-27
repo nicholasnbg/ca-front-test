@@ -1,0 +1,19 @@
+{
+  "name": "culture-amp-font-end",
+  "version": "1.0.0",
+  "description": "Culture Amp front end test submission",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholasnbg/ca-front-test.git"
+  },
+  "author": "Nick Gray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholasnbg/ca-front-test/issues"
+  },
+  "homepage": "https://github.com/nicholasnbg/ca-front-test#readme"
+}
