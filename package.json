@@ -4,6 +4,7 @@
   "description": "Culture Amp front end test submission",
   "main": "server.js",
   "scripts": {
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/nicholasnbg/ca-front-test/issues"
   },
-  "homepage": "https://github.com/nicholasnbg/ca-front-test#readme"
+  "homepage": "https://github.com/nicholasnbg/ca-front-test#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4"
+  }
 }
