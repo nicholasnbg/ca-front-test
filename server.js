@@ -23,7 +23,8 @@ app.get("/", (req, res) => {
 app.get("/survey/:id", (req, res) => {
   try {
     let survey = require(`./data/${req.params.id}`);
-    res.json(survey);
+    const response = () => res.json(survey);
+    setTimeout(response, Math.random() * 2000); // << Mock wait times from external api
   } catch (err) {
     res.json({
       error: "sorry, no such survey exists"
