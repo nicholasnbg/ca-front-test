@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import ResponseGauge from "../ResponseGauge";
 
 export default class SurveyCard extends Component {
   render() {
@@ -13,7 +14,9 @@ export default class SurveyCard extends Component {
           <SurveyName>{surveyInfo.name}</SurveyName>
           <Respondants>{surveyInfo.respondants}</Respondants>
         </Info>
-        <p>gauge to go here</p>
+        <ResponseGauge
+          responsePerc={Math.round(surveyInfo.response_rate * 100)}
+        />
         <LinkWrapper>
           <Link
             className="reactLink"
