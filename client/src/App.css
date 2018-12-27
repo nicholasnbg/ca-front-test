@@ -12,3 +12,54 @@ body {
 .App-link {
   color: #61dafb;
 }
+
+.Collapsible {
+  background: #fff;
+}
+
+.Collapsible__trigger {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-bottom: 1px solid #d5d5d5;
+  border-top: 1px solid #d5d5d5;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fa-caret-right {
+  transition: transform 500ms;
+  z-index: 2;
+}
+
+.Collapsible__trigger.is-open > .fa-caret-right {
+  transform: rotateZ(90deg);
+}
+.reactLink {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #777;
+}
+
+.chartjs-render-monitor {
+  height: 20vh !important;
+  width: 40vh !important;
+}
+
+@media (max-width: 700px) {
+  .chartjs-render-monitor {
+    height: 13vh !important;
+    width: 26vh !important;
+  }
+  .reactLink {
+    font-size: 1em;
+  }
+  .Collapsible__trigger {
+    font-size: 1.2em;
+  }
+}
