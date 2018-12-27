@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Provider } from "react-redux";
 import store from "./store";
 import Dashboard from "./components/dashboard/Dashboard";
+import Survey from "./components/survey/Survey";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <div className="app">
             <Container>
               <Route exact path="/" component={Dashboard} />
+              <Route path="/survey/:id" component={Survey} />
             </Container>
           </div>
         </Router>
