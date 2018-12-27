@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getSurveys } from "../../actions/surveysActions";
 
 import DashboardHeader from "./DashboardHeader";
+import SurveyCard from "./SurveyCard";
 import Spinner from "../Spinner";
 
 class Dashboard extends Component {
@@ -17,7 +18,8 @@ class Dashboard extends Component {
     if (loading) {
       dashboardContent = <Spinner />;
     } else {
-      dashboardContent = surveys && surveys.map(survey => <p>{survey.name}</p>);
+      dashboardContent =
+        surveys && surveys.map(survey => <SurveyCard surveyInfo={survey} />);
     }
     return (
       <div className="dashboard">
