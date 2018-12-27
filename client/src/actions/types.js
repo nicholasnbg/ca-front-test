@@ -1,0 +1,4 @@
+export const GET_SURVEYS = "GET_SURVEYS";
+export const GET_SURVEY = "GET_SURVEY";
+export const SURVEYS_LOADING = "SURVEYS_LOADING";
+export const SURVEY_LOADING = "SURVEY_LOADING";
