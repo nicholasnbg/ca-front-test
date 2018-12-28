@@ -34,11 +34,13 @@ The app should automatically open up in your default web browser, if it doesn't,
 
 ### React + Redux
 
-I chose to create the interface for my submission using React, along with Redux for state management. Redux might seem a little overkill for this application, but implementing Redux creates a scalable foundation for an application, allowing for clear, concise, and maintainable code that promotes the programming principle of 'Single Responsibility' by abstracting out the logic for dealing with receiving data from an api, and dealing with application state into actions and reducers. It also avoids problems such as prop drilling.
+I chose to create the interface for my submission using React, along with Redux for state management. Redux might seem a little overkill for this application, but implementing Redux creates a scalable foundation for an application, allowing for clear, concise, and maintainable code that promotes separation of concerns by abstracting out the logic for dealing with receiving data from an api, and dealing with application state into actions and reducers. It also avoids problems such as prop drilling.
+
+I would be interested to see how this application would look if Redux was replaced by the new React Context API and React Hooks, these are two things I am looking to explore further in the near future.
 
 ### Styled Components
 
-I chose to use Styled Components for the styling of my application as they are a concept I am very familiar with, and have found myself using more and more with React over other styling options/languages such as SASS. I feel that Styled Components align with the componentised nature of React, and make use of the reactive nature of props and state in react. You can see an example of this where the colour of the average rating text is set in the RatingQuestion component.
+I chose to use Styled Components for the styling of my application as they are a concept I am very familiar with, and have found myself using more and more with React over other styling options/languages such as SASS. I feel that Styled Components align with the 'componentised' nature of React, and make use of the reactive nature of props and state in react. You can see an example of this where the colour of the average rating text is set in the RatingQuestion component.
 
 ### React-collapsible and Chart.js
 
@@ -50,4 +52,4 @@ Testing is an area that was also negelected due to time constraints. I chose to 
 
 ### Responsiveness
 
-I decided to build and style this application in a desktop first way, given the nature of the content, I made the assumption that data heavy survey results would most likely be being viewed on a moniter / big screen, as opposed to a phone. If I had more time I would create a better looking / more responsive mobile layout.
+I decided to build and style this application in a desktop first way. Given the nature of the content, I made the assumption that data heavy survey results would most likely be being viewed on a monitor / big screen, as opposed to a phone. If I had more time I would create a better looking / more responsive mobile layout.

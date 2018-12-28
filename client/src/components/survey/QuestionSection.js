@@ -19,9 +19,12 @@ export default class QuestionSection extends Component {
           </React.Fragment>
         }
       >
-        {theme.questions.map((q, i) => (
-          <RatingQuestion key={i} question={q} />
-        ))}
+        {/* Extending this to include other question types could use a "question factory" */}
+        {theme.questions.map((q, i) => {
+          if (q.question_type === "ratingquestion") {
+            return <RatingQuestion key={i} question={q} />;
+          }
+        })}
       </Collapsible>
     );
   }
