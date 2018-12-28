@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { responseColors } from "../colors";
 
 export default class RatingQuestion extends Component {
   state = {
@@ -10,12 +11,10 @@ export default class RatingQuestion extends Component {
   };
 
   componentDidMount() {
-    const colors = ["#cc2900", "#e68a00", "#e6e600", "#2db300", "#43A089"];
-
     const [counts, average] = generateData(
       this.props.question.survey_responses
     );
-    const avgColor = colors[Math.floor(average === 5 ? 4.9 : average)];
+    const avgColor = responseColors[Math.floor(average === 5 ? 4.9 : average)];
     this.setState({
       counts,
       average,
@@ -52,7 +51,10 @@ const generateData = responses => {
   };
 
   responses.forEach(r => {
-    counts[r.response_content] += 1;
+    // tally counts of responses that are a number
+    if (parseInt(r.response_content) >= 0) {
+      counts[r.response_content] += 1;
+    }
   });
 
   const allScores = responses
