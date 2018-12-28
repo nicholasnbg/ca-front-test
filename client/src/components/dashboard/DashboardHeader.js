@@ -21,7 +21,7 @@ const Row = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr 0.5fr;
   @media (max-width: 700px) {
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 2fr 1fr 0.5fr;
   }
 `;
 
