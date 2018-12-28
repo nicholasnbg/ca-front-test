@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart } from "chart.js";
+import PropTypes from "prop-types";
 
+import { responseColors } from "./colors";
+
+//Code pulled from StackOverflow to allow text in center of gauge
 var originalDoughnutDraw = Chart.controllers.doughnut.prototype.draw;
 Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
   draw: function() {
@@ -16,6 +20,7 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
     ctx.font = fontSize + "em sans-serif";
     ctx.textBaseline = "middle";
 
+    //Sets inner gauge text to response number + %
     var text = chart.config.data.datasets[0].data[0] + "%",
       textX = Math.round((width - ctx.measureText(text).width) / 2),
       textY = height / 2;
@@ -26,7 +31,7 @@ Chart.helpers.extend(Chart.controllers.doughnut.prototype, {
 
 export default class ResponseGauge extends Component {
   state = {
-    colors: ["#cc2900", "#e68a00", "#e6e600", "#2db300", "#43A089"],
+    colors: responseColors,
     data: {
       labels: ["% Responded", "% No Reponse"],
       datasets: [
@@ -50,7 +55,11 @@ export default class ResponseGauge extends Component {
   componentDidMount() {
     let data = this.state.data;
     let { responsePerc } = this.props;
+
+    //Set gauge sections to response percentages
     data.datasets[0].data = [responsePerc, 100 - responsePerc];
+
+    // Set color of response bar
     const respColor = this.state.colors[Math.floor((responsePerc - 1) / 20)];
     data.datasets[0].backgroundColor[0] = respColor;
 
@@ -65,3 +74,7 @@ export default class ResponseGauge extends Component {
     );
   }
 }
+
+ResponseGauge.propTypes = {
+  responsePerc: PropTypes.number.isRequired
+};
