@@ -18,7 +18,7 @@ next, install all dependencies for the server with
 
 and then, install all dependencies for the client with
 
-`npm client-install`
+`npm run client-install`
 
 ## Running the Project
 
@@ -44,11 +44,11 @@ I chose to use Styled Components for the styling of my application as they are a
 
 ### React-collapsible and Chart.js
 
-For the sake of completing my submission within the rough time constraints recommended, I used external libraries to implement the collapsible sections seen for each theme on the Survey page, as well as the circular gaugue used to display the response rate throughout the application.
+For the sake of completing my submission within the rough time constraints recommended, I used external libraries to implement the collapsible sections seen for each theme on the Survey page, as well as the circular gauge used to display the response rate throughout the application.
 
 ### Testing
 
-Testing is an area that was also negelected due to time constraints. I chose to focus on other areas of my application as in my experience so far, front end development is not as test driven as other areas of a code base such as business logic on the back end, and testing in the form of snapshot and unit tests using Jest and Enzyme is done after the initial creation of front end code.
+Testing is an area that was also neglected due to time constraints. I chose to focus on other areas of my application as in my experience so far, front end development is not as test driven as other areas of a code base such as business logic on the back end, and testing in the form of snapshot and unit tests using Jest and Enzyme is done after the initial creation of front end code.
 
 ### Responsiveness
 
