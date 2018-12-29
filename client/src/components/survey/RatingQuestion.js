@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { responseColors } from "../colors";
+import { getResponseColor } from "../colors";
 
 export default class RatingQuestion extends Component {
   state = {
@@ -14,7 +14,8 @@ export default class RatingQuestion extends Component {
     const [counts, average] = generateData(
       this.props.question.survey_responses
     );
-    const avgColor = responseColors[Math.floor(average === 5 ? 4.9 : average)];
+    const avgColor = getResponseColor(average);
+
     this.setState({
       counts,
       average,
@@ -23,8 +24,9 @@ export default class RatingQuestion extends Component {
   }
 
   render() {
-    const { question } = this.props;
-    const { description } = question;
+    const {
+      question: { description }
+    } = this.props;
     const { average, avgColor } = this.state;
 
     return (
