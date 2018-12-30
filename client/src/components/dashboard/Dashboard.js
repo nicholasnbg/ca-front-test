@@ -8,7 +8,7 @@ import DashboardHeader from "./DashboardHeader";
 import SurveyCard from "./SurveyCard";
 import Spinner from "../Spinner";
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
   componentDidMount() {
     this.props.getSurveys();
   }

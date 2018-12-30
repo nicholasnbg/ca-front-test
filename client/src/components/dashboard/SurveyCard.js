@@ -11,7 +11,7 @@ export default class SurveyCard extends Component {
     const { surveyInfo } = this.props;
 
     return (
-      <Card>
+      <Card className="survey-card">
         <Info>
           <SurveyName>{surveyInfo.name}</SurveyName>
           <Respondents>Responses: {surveyInfo.participant_count}</Respondents>
