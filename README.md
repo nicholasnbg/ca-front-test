@@ -30,6 +30,10 @@ This will run the express server on port 5000, and the react app on port 3000.
 
 The app should automatically open up in your default web browser, if it doesn't, you can open it manually by going to http://localhost:3000 in your web browser.
 
+## Run Tests
+
+You can run the test suites by running the command `npm run test` and pressing the a key to run all tests.
+
 ## Thoughts and Comments
 
 ### React + Redux
@@ -48,7 +52,7 @@ For the sake of completing my submission within the rough time constraints recom
 
 ### Testing
 
-Testing is an area that was also neglected due to time constraints. I chose to focus on other areas of my application as in my experience so far, front end development is not as test driven as other areas of a code base such as business logic on the back end, and testing in the form of snapshot and unit tests using Jest and Enzyme is done after the initial creation of front end code.
+I chose to create some basic testing for some of the dashboard components as well as the redux actions and reducer functions. I used the Jest and Enzyme libraries for these.
 
 ### Responsiveness
 
