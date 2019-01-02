@@ -39,7 +39,7 @@ function setup() {
 }
 
 describe("<Dashboard >", () => {
-  it("should render itself", () => {
+  it("renders itself", () => {
     const { enzymeWrapper } = setup();
     expect(enzymeWrapper.find("div").hasClass("dashboard")).toBe(true);
   });
