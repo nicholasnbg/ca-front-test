@@ -23,7 +23,7 @@ export default class SurveyCard extends Component {
           <Link
             className="reactLink"
             to={{
-              pathname: `/survey/${surveyInfo.surveyId}`
+              pathname: surveyInfo.urls.survey
             }}
           >
             <ResultsLink>Results >></ResultsLink>
