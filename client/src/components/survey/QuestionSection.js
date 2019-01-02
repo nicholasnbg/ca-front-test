@@ -23,6 +23,9 @@ export default class QuestionSection extends Component {
         {theme.questions.map((q, i) => {
           if (q.question_type === "ratingquestion") {
             return <RatingQuestion key={i} question={q} />;
+          } else {
+            console.log(`unexpected question type: ${q.question_type}`);
+            return null;
           }
         })}
       </Collapsible>

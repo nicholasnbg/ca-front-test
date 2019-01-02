@@ -18,7 +18,7 @@ next, install all dependencies for the server with
 
 and then, install all dependencies for the client with
 
-`npm client-install`
+`npm run client-install`
 
 ## Running the Project
 
@@ -29,6 +29,10 @@ Once all dependencies have been installed, you can start the project using the c
 This will run the express server on port 5000, and the react app on port 3000.
 
 The app should automatically open up in your default web browser, if it doesn't, you can open it manually by going to http://localhost:3000 in your web browser.
+
+## Run Tests
+
+You can run the test suites by running the command `npm run test` and pressing the a key to run all tests.
 
 ## Thoughts and Comments
 
@@ -44,11 +48,11 @@ I chose to use Styled Components for the styling of my application as they are a
 
 ### React-collapsible and Chart.js
 
-For the sake of completing my submission within the rough time constraints recommended, I used external libraries to implement the collapsible sections seen for each theme on the Survey page, as well as the circular gaugue used to display the response rate throughout the application.
+For the sake of completing my submission within the rough time constraints recommended, I used external libraries to implement the collapsible sections seen for each theme on the Survey page, as well as the circular gauge used to display the response rate throughout the application.
 
 ### Testing
 
-Testing is an area that was also negelected due to time constraints. I chose to focus on other areas of my application as in my experience so far, front end development is not as test driven as other areas of a code base such as business logic on the back end, and testing in the form of snapshot and unit tests using Jest and Enzyme is done after the initial creation of front end code.
+I chose to create some basic testing for some of the dashboard components as well as the redux actions and reducer functions. I used the Jest and Enzyme libraries for these.
 
 ### Responsiveness
 

@@ -9,13 +9,12 @@ import ResponseGauge from "../ResponseGauge";
 export default class SurveyCard extends Component {
   render() {
     const { surveyInfo } = this.props;
-    const surveyId = surveyInfo.url.split("/")[2].split(".")[0];
 
     return (
-      <Card>
+      <Card className="survey-card">
         <Info>
           <SurveyName>{surveyInfo.name}</SurveyName>
-          <Respondants>Responses: {surveyInfo.participant_count}</Respondants>
+          <Respondents>Responses: {surveyInfo.participant_count}</Respondents>
         </Info>
         <ResponseGauge
           responsePerc={Math.round(surveyInfo.response_rate * 100)}
@@ -24,7 +23,7 @@ export default class SurveyCard extends Component {
           <Link
             className="reactLink"
             to={{
-              pathname: `/survey/${surveyId}`
+              pathname: surveyInfo.urls.survey
             }}
           >
             <ResultsLink>Results >></ResultsLink>
@@ -71,7 +70,7 @@ const SurveyName = styled.h2`
   }
 `;
 
-const Respondants = styled.h4`
+const Respondents = styled.h4`
   margin-top: 10px;
   margin-left: 15px;
   color: #777;
