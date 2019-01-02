@@ -6,7 +6,7 @@ See `./Instructions.md` for instructions for this coding test.
 
 ## How to install
 
-Clone this repository with the command `https://github.com/nicholasnbg/ca-front-test.git`
+Clone this repository with the command `git clone https://github.com/nicholasnbg/ca-front-test.git`
 
 then enter the project directory with
 
