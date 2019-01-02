@@ -9,5 +9,5 @@ export const responseColors = [
 export const gaugeColors = ["#43A089", "#b5b5b5"];
 
 export const getResponseColor = int => {
-  return responseColors[Math.floor(int === 5 ? 4.9 : int)];
+  return responseColors[Math.floor(int === 5 ? 4 : int)];
 };
